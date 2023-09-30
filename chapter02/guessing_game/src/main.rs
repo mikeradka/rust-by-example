@@ -9,7 +9,7 @@ fn main() { // Declare the main function with no parameters
     // Generate a secret number between 1 and 100
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
-    /* Print the secret number
+    /* Print the secret number (debugging only)
     println!("The secret number is {secret_number}");
     */
 
