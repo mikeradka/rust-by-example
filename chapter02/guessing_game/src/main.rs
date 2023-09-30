@@ -7,9 +7,10 @@ fn main() { // Declare the main function with no parameters
 
     let mut guess = String::new();  // Create a new mutable empty string
 
+    // Receiving user input
     io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
+        .read_line(&mut guess)  // Call the read_line method on the stdio handle to get input from the user
+        .expect("Failed to read line"); // Handle an error if the line cannot be read
 
     println!("You guessed: {guess}");
 }
