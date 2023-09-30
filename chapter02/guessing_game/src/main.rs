@@ -30,11 +30,11 @@ fn main() { // Declare the main function with no parameters
     
         // A match expression decides what to do next based on which variant of Ordering is returned
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
+            Ordering::Less => println!("Too small!"),   // If the value of guess is lower than secret number, print 'Too small'
+            Ordering::Greater => println!("Too big!"),   // If the value of guess is higher than secret number, print 'Too big'
             Ordering::Equal => {
-                println!("You win!");
-                break;
+                println!("You win!");   // If the value of guess equals the secret number, print 'You win!'
+                break;  // Exit the loop
             }
         }
     }
