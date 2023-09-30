@@ -56,4 +56,9 @@ fn main() {
   let number: f64 = 1.0;
   let width: usize = 5;
   println!("{number:>width$}");
+
+  // Add a println! macro call that prints: Pi is roughly 3.142 by 
+  // controlling the number of decimal places shown.
+  let pi = 3.141592;
+  println!("{pi:.3}"); // {pi:.3}
 }
