@@ -61,4 +61,7 @@ fn main() {
   // controlling the number of decimal places shown.
   let pi = 3.141592;
   println!("{pi:.3}"); // {pi:.3}
+
+  // print something to stderr
+  eprintln!("Here is {0} {1}", "some string", "printed to stderr");
 }
