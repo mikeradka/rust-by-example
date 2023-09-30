@@ -9,8 +9,9 @@ fn main() { // Declare the main function with no parameters
     // Generate a secret number between 1 and 100
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
-    // Print the secret number
+    /* Print the secret number
     println!("The secret number is {secret_number}");
+    */
 
     loop {
         println!("Please input your guess: ");
@@ -24,7 +25,10 @@ fn main() { // Declare the main function with no parameters
             .expect("Failed to read line"); // Handle an error if the line cannot be read
     
         // convert guess to an unsigned 32-bit integer
-        let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
     
         println!("You guessed: {guess}");
     
