@@ -1,5 +1,5 @@
-use std::io; // Bring the std::io library into scope
 use rand::Rng;  // Bring the Rng trait into scope
+use std::io; // Bring the std::io library into scope
 
 // The main function is the entry point into the program
 fn main() { // Declare the main function with no parameters
