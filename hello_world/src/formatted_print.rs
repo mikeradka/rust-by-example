@@ -64,4 +64,9 @@ fn main() {
 
   // print something to stderr
   eprintln!("Here is {0} {1}", "some string", "printed to stderr");
+
+  // the print! macro won't print a new line after the string.
+  // the println! macro will.
+  print!("a");
+  print!("b");
 }
