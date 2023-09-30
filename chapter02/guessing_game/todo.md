@@ -1,3 +1,4 @@
 # Todo
 - [x] Generating a Secret Number
-- [ ] Comparing the Guess to the Secret Number
+- [x] Comparing the Guess to the Secret Number
+- [ ] Allowing Multiple Guesses with Looping
