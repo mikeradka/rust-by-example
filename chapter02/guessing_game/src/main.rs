@@ -12,25 +12,30 @@ fn main() { // Declare the main function with no parameters
     // Print the secret number
     println!("The secret number is {secret_number}");
 
-    println!("Please input your guess: ");
+    loop {
+        println!("Please input your guess: ");
 
-    // Create a new mutable empty string
-    let mut guess = String::new();
-
-    // Receiving user input
-    io::stdin()
-        .read_line(&mut guess)  // Call the read_line method on the stdio handle to get input from the user
-        .expect("Failed to read line"); // Handle an error if the line cannot be read
-
-    // convert guess to an unsigned 32-bit integer
-    let guess: u32 = guess.trim().parse().expect("Please type a number!");
-
-    println!("You guessed: {guess}");
-
-    // A match expression decides what to do next based on which variant of Ordering is returned
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small!"),
-        Ordering::Greater => println!("Too big!"),
-        Ordering::Equal => println!("You win!"),
+        // Create a new mutable empty string
+        let mut guess = String::new();
+    
+        // Receiving user input
+        io::stdin()
+            .read_line(&mut guess)  // Call the read_line method on the stdio handle to get input from the user
+            .expect("Failed to read line"); // Handle an error if the line cannot be read
+    
+        // convert guess to an unsigned 32-bit integer
+        let guess: u32 = guess.trim().parse().expect("Please type a number!");
+    
+        println!("You guessed: {guess}");
+    
+        // A match expression decides what to do next based on which variant of Ordering is returned
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
+        }
     }
 }
