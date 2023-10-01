@@ -28,4 +28,31 @@ fn main() {
      */
     const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
     println!("Constant THREE_HOURS_IN_SECONDS: {THREE_HOURS_IN_SECONDS}");
+
+    /*
+     * Shadowing
+     * You can declare a new variable with the same name
+     * as a previous variable. The first variable is
+     * 'shadowed' by the second. The second variable
+     * 'overshadows'the first. A variable can be shadowed
+     * by using the same name.
+     */
+
+    let y = 5;  // y is bound to a value of 5
+
+    let y = y + 1;  // new variable y is created, overshadowing the first y
+
+    // Create an inner scope with curly brackets
+    {
+        let y = y * 2;  // third y overshadows second y
+        println!("The value of y in the inner scope is: {y}");
+    }
+
+    println!("The value of y is: {y}"); // second y overshadows first y
+
+    let spaces = "   ";
+    println!("First 'spaces' var: {spaces} (str)");
+    let spaces = spaces.len();
+    println!("Second 'spaces' var: {spaces} (int)");
+
 }
