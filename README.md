@@ -8,3 +8,4 @@ An exercise in learning some rust via https://doc.rust-lang.org/rust-by-example/
 - To run: `cargo run`
 - To generate project docs and open in a browser: `cargo doc --open`
 - To update packages: `cargo update`
+- To get more information about a compilation error: `rustc --explain E0282` (replace with the error no)
