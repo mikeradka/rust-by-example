@@ -40,4 +40,10 @@ fn main() {
     println!("my_byte = {my_byte} (u8)");
     
     println!("\nFloating-Point Types:");
+    
+    let my_float_1 = 2.0;
+    println!("my_float_1 = {my_float_1:.1} (f64)"); // :.1 gives one decimal precision
+
+    let my_float_2: f32 = 3.0;
+    println!("my_float_2 = {my_float_2:.2} (f32)"); // :.2 gives two decimal precision
 }
