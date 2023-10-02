@@ -49,3 +49,28 @@ fn main() {
 }
 ```
 * Floating-point numbers are represented according to the IEEE-754 standard. The f32 type is a single-precision float, and f64 has double precision.
+
+#### Numeric Operations
+* Rust supports basic mathematical operations like addition, subtraction, multiplecation, division, and remainder.
+
+```
+fn main() {
+    // addition
+    let sum = 5 + 10;
+
+    // subtraction
+    let difference = 95.5 - 4.3;
+
+    // multiplication
+    let product = 4 * 30;
+
+    // division
+    let quotient = 56.7 / 32.2;
+    let truncated = -5 / 3; // Results in -1
+
+    // remainder
+    let remainder = 43 % 5;
+}
+```
+
+* A list of all operators that Rust provides is [listed here](https://doc.rust-lang.org/book/appendix-02-operators.html).
