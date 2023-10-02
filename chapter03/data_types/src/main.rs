@@ -38,5 +38,6 @@ fn main() {
 
     let my_byte = b'A';
     println!("my_byte = {my_byte} (u8)");
-    println!();
+    
+    println!("\nFloating-Point Types:");
 }
