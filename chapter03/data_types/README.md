@@ -48,3 +48,4 @@ fn main() {
     let y: f32 = 3.0; // f32
 }
 ```
+* Floating-point numbers are represented according to the IEEE-754 standard. The f32 type is a single-precision float, and f64 has double precision.
