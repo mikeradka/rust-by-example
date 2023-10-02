@@ -19,6 +19,8 @@ fn main() {
     let guess: u32 = "42".parse().expect("Not a number!");
     println!("guess = {guess}");
 
+    println!("\nInteger Types:");
+
     let my_decimal_1 = 98221;
     println!("my_decimal_1 = {my_decimal_1} (i32)");
 
@@ -36,4 +38,5 @@ fn main() {
 
     let my_byte = b'A';
     println!("my_byte = {my_byte} (u8)");
+    println!();
 }
