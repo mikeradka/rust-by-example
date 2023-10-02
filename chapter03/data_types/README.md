@@ -34,3 +34,17 @@ A _scalar_ data type represents a single value. Rust has four primary scalar typ
 | Byte (`u8` only) | b'A'        |
 
 - In Rust, integer types default to `i32`. The primary situation in which you'd use `isize` or `usize` is when indexing some sort of collection.
+
+#### Floating-Point Types
+* Rust has two primitive types for *floating-point numbers*, which are numbers with decimal points. 
+* Rust's floating types are `f32` and `f64`.
+* The default type is `f64`.
+* All floating-point types are signed
+* Example:
+```
+fn main() {
+    let x = 2.0; // f64
+
+    let y: f32 = 3.0; // f32
+}
+```
