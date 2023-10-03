@@ -4,5 +4,5 @@
 - [x] Add some integer examples
 - [x] Add some floating-point examples
 - [x] Add some numeric operation examples
-- [ ] Add some boolean examples
+- [x] Add some boolean examples
 - [ ] Add some character type examples
