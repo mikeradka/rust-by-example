@@ -117,8 +117,8 @@ fn main() {
     let my_tup: (i32, f64, u8) = (500, 6.4, 1);
 }
 ```
-- The variable `my_tup` binds to the entire tuple, because it is considered a single compound element.
-- To get the individual values out of a tuple, we can use pattern matching to destructure a tuple value:
+- The variable `my_tup` _binds_ to the entire tuple, because it is considered a _single compound element_.
+- To get the individual values out of a tuple, we can use _pattern matching_ to _destructure_ a tuple value:
 
 ```
 fn main() {
