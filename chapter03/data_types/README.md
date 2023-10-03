@@ -4,10 +4,10 @@ The [Chapter 3.2 Exercise](https://doc.rust-lang.org/book/ch03-02-data-types.htm
 ## Additional Notes
 ### Scalar Data Types
 A _scalar_ data type represents a single value. Rust has four primary scalar types:
- 1. Integers
- 1. Floating-point numbers
- 1. Booleans
- 1. Characters
+ 1. [Integers](#integer-types)
+ 1. [Floating-point numbers](#floating-point-types)
+ 1. [Booleans](#the-boolean-type)
+ 1. [Characters](#the-character-type)
 #### Integer Types
 - A number *without* a fractional component. - For example, the `u32` is an *unsigned 32-bit integer* (takes up 32 bits of space)
 - Any of the below types can be used in Rust to declare the type of integer value:
