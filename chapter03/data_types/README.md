@@ -101,3 +101,8 @@ fn main() {
 - `char` literals are specified with single quotes, whereas string literals are specified with double quotes.
 - Rust's `char` type is four bytes in size.
 - It represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII.
+
+### Compound Data Types
+_Compound data types_ can group _multiple values_ into one type. Rust has two primitive compound types:
+1. Tuples
+2. Arrays
