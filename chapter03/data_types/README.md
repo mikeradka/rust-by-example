@@ -87,3 +87,17 @@ fn main() {
 }
 ```
 - Boolean values are mainly used through conditionals, such as an `if` expression.
+
+#### The Character Type
+- Rust's `char` type is the language's most primitive alphabetic type.
+
+```
+fn main() {
+    let c = 'z';
+    let z: char = 'ℤ'; // with explicit type annotation
+    let heart_eyed_cat = '😻';
+}
+```
+- `char` literals are specified with single quotes, whereas string literals are specified with double quotes.
+- Rust's `char` type is four bytes in size.
+- It represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII.

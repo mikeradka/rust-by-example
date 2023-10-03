@@ -76,4 +76,14 @@ fn main() {
 
     let f: bool = false; // with explicit type annotation
     println!("f = {f}");
+
+    println!("\nThe Character Type:");
+    let c = 'z';
+    println!("char c = {c}");
+
+    let z: char = 'ℤ'; // with explicit type annotation
+    println!("char z = {z}");
+
+    let heart_eyed_cat = '😻';
+    println!("heart_eyed_cat = {heart_eyed_cat}");
 }

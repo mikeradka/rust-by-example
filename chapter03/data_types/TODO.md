@@ -5,4 +5,8 @@
 - [x] Add some floating-point examples
 - [x] Add some numeric operation examples
 - [x] Add some boolean examples
-- [ ] Add some character type examples
+- [x] Add some character type examples
+- [x] Finish Scalar Data Types
+- [ ] Add some tuple examples
+- [ ] Add some array examples
+- [ ] Finish Compound Data Types
