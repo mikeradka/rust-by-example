@@ -68,4 +68,12 @@ fn main() {
     // remainder
     let remainder = 43 % 5;
     println!("43 % 5 = {remainder}");
+
+    println!("\nThe Boolean Type:");
+    // boolean
+    let t = true;
+    println!("t = {t}");
+
+    let f: bool = false; // with explicit type annotation
+    println!("f = {f}");
 }
