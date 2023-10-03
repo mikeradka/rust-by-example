@@ -104,7 +104,7 @@ fn main() {
 
 ### Compound Data Types
 _Compound data types_ can group _multiple values_ into one type. Rust has two primitive compound types:
-1. Tuples
+1. [Tuples](#the-tuple-type)
 2. Arrays
 
 #### The Tuple Type
