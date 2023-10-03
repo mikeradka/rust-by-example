@@ -106,3 +106,26 @@ fn main() {
 _Compound data types_ can group _multiple values_ into one type. Rust has two primitive compound types:
 1. Tuples
 2. Arrays
+
+#### The Tuple Type
+- A _tuple_ is a general way of grouping together a number of values with a variety of types into a compund data type.
+- Tuples have a fixed length. Once declared, they cannot grow or shrink in size.
+- A tuple is created by writing a comma-separated list of values inside parenthesis. Each position in the tuple has a type, which do not have to be the same.
+
+```
+fn main() {
+    let my_tup: (i32, f64, u8) = (500, 6.4, 1);
+}
+```
+- The variable `my_tup` binds to the entire tuple, because it is considered a single compound element.
+- To get the individual values out of a tuple, we can use pattern matching to destructure a tuple value:
+
+```
+fn main() {
+    let my_tup = (500, 6.4, 1);
+
+    let (x, y, z) = my_tup;
+
+    println!("The value of y is: {y}");
+}
+```
