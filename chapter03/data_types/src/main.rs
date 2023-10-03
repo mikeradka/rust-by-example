@@ -46,4 +46,26 @@ fn main() {
 
     let my_float_2: f32 = 3.0;
     println!("my_float_2 = {my_float_2:.2} (f32)"); // :.2 gives two decimal precision
+
+    println!("\nNumeric Operations:");
+
+    // addition
+    let sum = 5 + 10;
+    println!("5 + 10 = {sum}");
+
+    // subtraction
+    let difference = 95.5 - 4.3;
+    println!("95.5 - 4.3 = {difference}");
+
+    // division
+    let quotient = 56.7 / 32.2;
+    println!("56.7 / 32.2 = {quotient}");
+
+    // more division
+    let truncated = -5 / 3; // Results in -1
+    println!("-5 / 3 = {truncated}");
+
+    // remainder
+    let remainder = 43 % 5;
+    println!("43 % 5 = {remainder}");
 }
