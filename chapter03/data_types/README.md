@@ -74,3 +74,16 @@ fn main() {
 ```
 
 * A list of all operators that Rust provides is [listed here](https://doc.rust-lang.org/book/appendix-02-operators.html).
+
+#### The Boolean Type
+- Just like other programming languages, a boolean in Rust has two possible values: `true` and `false`.
+- Booleans are one byte in size.
+- Booleans in Rust are specified using `bool`.
+```
+fn main() {
+    let t = true;
+
+    let f: bool = false; // with explicit type annotation
+}
+```
+- Boolean values are mainly used through conditionals, such as an `if` expression.
