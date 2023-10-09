@@ -7,6 +7,6 @@
 - [x] Add some boolean examples
 - [x] Add some character type examples
 - [x] Finish Scalar Data Types
-- [ ] Add some tuple examples
+- [x] Add some tuple examples
 - [ ] Add some array examples
 - [ ] Finish Compound Data Types
