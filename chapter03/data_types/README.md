@@ -151,3 +151,12 @@ fn main() {
 
  #### The Array Type
  - Another way to have a collection of multiple values is with an _array_. Unlike a _tuple_, every element of an array must have the same type. Unlike arrays in some other languages, **arrays in Rust have a fixed length**.
+ - We write the values in an array as a comma-separated list inside square brackets:
+ ```
+ fn main() {
+    let a = [1, 2, 3, 4, 5];
+ }
+ ```
+ - _Arrays_ are useful when you want your data allocated on the stack rather than the heap (more in Chapter 4) or when you want to ensure you always have a fixed number of elements.
+ - An _array_ is **not** as flexible as a _vector_ type.
+ - A _vector_ is a similar _collection_ type provided by the standard library that **is allowed to grow or shrink in size. If you’re unsure whether to use an _array_ or a _vector_, chances are you should use a _vector_**.
