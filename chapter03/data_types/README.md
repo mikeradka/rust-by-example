@@ -105,7 +105,7 @@ fn main() {
 ### Compound Data Types
 _Compound data types_ can group _multiple values_ into one type. Rust has two primitive compound types:
 1. [Tuples](#the-tuple-type)
-2. Arrays
+2. [Arrays](#the-array-type)
 
 #### The Tuple Type
 - A _tuple_ is a general way of grouping together a number of values with a variety of types into a compund data type.
@@ -147,4 +147,7 @@ fn main() {
  ```
  - This program creates the tuple x and then accesses each element of the tuple using their respective indices. As with most programming languages, the first index in a tuple is `0`.
 
- - The tuple without any values has a special name, `unit`. This value and its corresponding type are both written `()` and represent an empty value or an empty return type. Expressions implicitly return the unit value if they don’t return any other value.
+ - The tuple without any values has a special name, _unit_. This value and its corresponding type are both written `()` and represent an empty value or an empty return type. Expressions implicitly return the unit value if they don’t return any other value.
+
+ #### The Array Type
+ - Another way to have a collection of multiple values is with an _array_. Unlike a _tuple_, every element of an array must have the same type. Unlike arrays in some other languages, **arrays in Rust have a fixed length**.
