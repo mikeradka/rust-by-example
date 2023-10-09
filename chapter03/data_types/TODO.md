@@ -8,5 +8,6 @@
 - [x] Add some character type examples
 - [x] Finish Scalar Data Types
 - [x] Add some tuple examples
-- [ ] Add some array examples
+- [x] Add some array examples
+- [ ] Accessing array elements
 - [ ] Finish Compound Data Types
