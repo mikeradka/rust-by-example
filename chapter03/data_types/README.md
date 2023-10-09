@@ -160,3 +160,9 @@ fn main() {
  - _Arrays_ are useful when you want your data allocated on the stack rather than the heap (more in Chapter 4) or when you want to ensure you always have a fixed number of elements.
  - An _array_ is **not** as flexible as a _vector_ type.
  - A _vector_ is a similar _collection_ type provided by the standard library that **is allowed to grow or shrink in size. If you’re unsure whether to use an _array_ or a _vector_, chances are you should use a _vector_**.
+ - _Arrays_ are more useful **when you know the number of elements will not need to change**. For example, an array of months:
+
+```
+let months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
+``` 
