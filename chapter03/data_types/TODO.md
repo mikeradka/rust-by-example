@@ -10,5 +10,5 @@
 - [x] Add some tuple examples
 - [x] Add some array examples
 - [x] Accessing array elements
-- [ ] Invalid array element access
-- [ ] Finish Compound Data Types
+- [x] Invalid array element access
+- [x] Finish Compound Data Types
