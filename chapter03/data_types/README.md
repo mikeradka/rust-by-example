@@ -171,3 +171,13 @@ let months = ["January", "February", "March", "April", "May", "June", "July",
 ```rust
 let a: [i32; 5] = [1, 2, 3, 4, 5];
 ```
+
+- Here, `i32` is the type of each element. After the semicolon, the number `5` indicates the array contains five elements.
+- You can also initialize an array to contain the same value for each element by specifying the initial value, followed by a semicolon, and then the length of the array in square brackets, as shown here:
+```rust
+let a = [3; 5];
+```
+- The array named `a` will contain `5` _elements_ that will all be set to the _value_ `3` initially.
+- This is the same as writing `let a = [3, 3, 3, 3, 3]`; but in a more concise way.
+
+##### Accessing Array Elements
