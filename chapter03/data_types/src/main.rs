@@ -86,4 +86,11 @@ fn main() {
 
     let heart_eyed_cat = '😻';
     println!("heart_eyed_cat = {heart_eyed_cat}");
+
+    println!("\nThe Tuple Type");
+    let my_tup: (i32, f64, u8) = (500, 6.4, 1);
+    let (my_tup_x, my_tup_y, my_tup_z) = my_tup; // use pattern matching to destructure the tuple value
+    println!("my_tup_x = {my_tup_x}");  // print the first value in the tuple
+    println!("my_tup_y = {my_tup_y}");  // print the second value in the tuple
+    println!("my_tup_z = {my_tup_z}");  // print the third value in the tuple
 }
