@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
     /*
      * Example of a data type annotation
@@ -118,4 +120,18 @@ fn main() {
 
     let my_array_second = my_array[1];
     println!("my_array[1] = {my_array_second}");
+
+    // Example: Invalid Array Element Access
+    println!("Please enter an array index (will fail when greater-than 4).");
+    let mut index = String::new();
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number.");
+    let element = my_array[index];
+    println!("The value of the element at index {index} is: {element}.");
+
 }
