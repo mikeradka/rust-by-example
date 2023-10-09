@@ -93,4 +93,11 @@ fn main() {
     println!("my_tup_x = {my_tup_x}");  // print the first value in the tuple
     println!("my_tup_y = {my_tup_y}");  // print the second value in the tuple
     println!("my_tup_z = {my_tup_z}");  // print the third value in the tuple
+
+    let five_hundred = my_tup.0;
+    println!("my_tup.0 = {five_hundred}");
+    let six_point_four = my_tup.1;
+    println!("my_tup.1 = {six_point_four}");
+    let one = my_tup.2;
+    println!("my_tup.2 = {one}");
 }
