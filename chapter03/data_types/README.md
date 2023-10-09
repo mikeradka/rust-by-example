@@ -131,3 +131,18 @@ fn main() {
 ```
 - The above example first creates a tuple, `my_tup`, with three values.
 - Next, the tuple `my_tup` is "destructured" - broken into three parts: `x`, `y`, and `z`.
+
+- A tuple element can also be accessed directly by using a period (`.`), followed by the index of the value
+ you want to access. For example:
+ ```
+ fn main() {
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+
+    let five_hundred = x.0;
+
+    let six_point_four = x.1;
+
+    let one = x.2;
+}
+ ```
+ - This program creates the tuple x and then accesses each element of the tuple using their respective indices. As with most programming languages, the first index in a tuple is `0`.
