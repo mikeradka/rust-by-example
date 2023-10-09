@@ -129,3 +129,5 @@ fn main() {
     println!("The value of y is: {y}");
 }
 ```
+- The above example first creates a tuple, `my_tup`, with three values.
+- Next, the tuple `my_tup` is "destructured" - broken into three parts: `x`, `y`, and `z`.
