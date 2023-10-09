@@ -1,5 +1,5 @@
 # Rust By Example (rust-by-example)
-An exercise in learning some rust via https://doc.rust-lang.org/rust-by-example/
+An exercise in learning some rust via [The Rust Programming Language book](https://doc.rust-lang.org/book/) and [Rust by Example](https://doc.rust-lang.org/rust-by-example/).
 
 ## General Rust/Cargo Notes
 - To create a new rust project: `cargo new <name>`
