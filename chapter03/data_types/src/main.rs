@@ -109,4 +109,7 @@ fn main() {
     let months = ["January", "February", "March", "April",
     "May", "June", "July", "August", "September", "October", "November", "December"];
     println!("months = {months:?}");
+
+    let five_threes = [3; 5];   // Create an array with 5 elements all with a value of 3
+    println!("five_threes = {five_threes:?}");
 }
