@@ -95,15 +95,15 @@ fn main() {
     println!("my_tup_y = {my_tup_y}");  // print the second value in the tuple
     println!("my_tup_z = {my_tup_z}");  // print the third value in the tuple
 
-    let five_hundred = my_tup.0;
+    let five_hundred = my_tup.0;    // Access the first value in the tuple
     println!("my_tup.0 = {five_hundred}");
-    let six_point_four = my_tup.1;
+    let six_point_four = my_tup.1;  // Access the second value in the tuple
     println!("my_tup.1 = {six_point_four}");
-    let one = my_tup.2;
+    let one = my_tup.2; // Access the third value in the tuple
     println!("my_tup.2 = {one}");
 
     println!("\nThe Array Type");
-    let my_array = [1, 2, 3, 4, 5];
+    let my_array: [i32; 5] = [1, 2, 3, 4, 5];
     println!("my_array = {my_array:?}");
 
     let months = ["January", "February", "March", "April",
