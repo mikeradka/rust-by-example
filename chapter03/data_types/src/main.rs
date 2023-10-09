@@ -112,4 +112,10 @@ fn main() {
 
     let five_threes = [3; 5];   // Create an array with 5 elements all with a value of 3
     println!("five_threes = {five_threes:?}");
+
+    let my_array_first = my_array[0];
+    println!("my_array[0] = {my_array_first}");
+
+    let my_array_second = my_array[1];
+    println!("my_array[1] = {my_array_second}");
 }
