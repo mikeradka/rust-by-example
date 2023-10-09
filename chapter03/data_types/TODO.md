@@ -9,5 +9,6 @@
 - [x] Finish Scalar Data Types
 - [x] Add some tuple examples
 - [x] Add some array examples
-- [ ] Accessing array elements
+- [x] Accessing array elements
+- [ ] Invalid array element access
 - [ ] Finish Compound Data Types
