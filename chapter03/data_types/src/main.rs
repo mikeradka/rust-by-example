@@ -104,5 +104,9 @@ fn main() {
 
     println!("\nThe Array Type");
     let my_array = [1, 2, 3, 4, 5];
-    println!("my_array = {my_array:?}")
+    println!("my_array = {my_array:?}");
+
+    let months = ["January", "February", "March", "April",
+    "May", "June", "July", "August", "September", "October", "November", "December"];
+    println!("months = {months:?}");
 }
