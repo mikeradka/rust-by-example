@@ -41,7 +41,7 @@ A _scalar_ data type represents a single value. Rust has four primary scalar typ
 * The default type is `f64`.
 * All floating-point types are signed
 * Example:
-```
+```rust
 fn main() {
     let x = 2.0; // f64
 
@@ -53,7 +53,7 @@ fn main() {
 #### Numeric Operations
 * Rust supports basic mathematical operations like addition, subtraction, multiplecation, division, and remainder.
 
-```
+```rust
 fn main() {
     // addition
     let sum = 5 + 10;
@@ -79,7 +79,7 @@ fn main() {
 - Just like other programming languages, a boolean in Rust has two possible values: `true` and `false`.
 - Booleans are one byte in size.
 - Booleans in Rust are specified using `bool`.
-```
+```rust
 fn main() {
     let t = true;
 
@@ -91,7 +91,7 @@ fn main() {
 #### The Character Type
 - Rust's `char` type is the language's most primitive alphabetic type.
 
-```
+```rust
 fn main() {
     let c = 'z';
     let z: char = 'ℤ'; // with explicit type annotation
@@ -112,7 +112,7 @@ _Compound data types_ can group _multiple values_ into one type. Rust has two pr
 - Tuples have a fixed length. Once declared, they cannot grow or shrink in size.
 - A tuple is created by writing a comma-separated list of values inside parenthesis. Each position in the tuple has a type, which do not have to be the same.
 
-```
+```rust
 fn main() {
     let my_tup: (i32, f64, u8) = (500, 6.4, 1);
 }
@@ -120,7 +120,7 @@ fn main() {
 - The variable `my_tup` _binds_ to the entire tuple, because it is considered a _single compound element_.
 - To get the individual values out of a tuple, we can use _pattern matching_ to _destructure_ a tuple value:
 
-```
+```rust
 fn main() {
     let my_tup = (500, 6.4, 1);
 
@@ -134,7 +134,7 @@ fn main() {
 
 - A tuple element can also be accessed directly by using a period (`.`), followed by the index of the value
  you want to access. For example:
- ```
+ ```rust
  fn main() {
     let x: (i32, f64, u8) = (500, 6.4, 1);
 
@@ -152,7 +152,7 @@ fn main() {
  #### The Array Type
  - Another way to have a collection of multiple values is with an _array_. Unlike a _tuple_, every element of an array must have the same type. Unlike arrays in some other languages, **arrays in Rust have a fixed length**.
  - We write the values in an array as a comma-separated list inside square brackets:
- ```
+ ```rust
  fn main() {
     let a = [1, 2, 3, 4, 5];
  }
@@ -162,7 +162,12 @@ fn main() {
  - A _vector_ is a similar _collection_ type provided by the standard library that **is allowed to grow or shrink in size. If you’re unsure whether to use an _array_ or a _vector_, chances are you should use a _vector_**.
  - _Arrays_ are more useful **when you know the number of elements will not need to change**. For example, an array of months:
 
-```
+```rust
 let months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
 ``` 
+
+- You write an array’s type using square brackets with the type of each element, a semicolon, and then the number of elements in the array, like so:
+```rust
+let a: [i32; 5] = [1, 2, 3, 4, 5];
+```
