@@ -8,10 +8,14 @@ The [Chapter 3.3 Exercise](https://doc.rust-lang.org/book/ch03-03-how-functions-
 fn main() {
     println!("Hello, world!");
 
-    another_function();
+    another_function(); // another_function can be called from main
 }
 
 fn another_function() { // another_function is an example of snake case
     println!("Another function.");
 }
 ```
+- We define a function in Rust by entering `fn` followed by a function name and a set of parentheses. The curly brackets `{}` tell the compiler where the function body begins and ends.
+- We can call any function we’ve defined by entering its name followed by a set of parentheses. Because `another_function` is defined in the program, it can be called from inside the `main` function. 
+- Rust doesn’t care where you define your functions, only that they’re defined somewhere in a scope that can be seen by the caller.
+- In a Rust program, the lines execute in the order in which they appear in the main function.
