@@ -89,6 +89,7 @@ fn main() {
 
     println!("\nThe Tuple Type");
     let my_tup: (i32, f64, u8) = (500, 6.4, 1);
+    println!("my_tup = {my_tup:?}");
     let (my_tup_x, my_tup_y, my_tup_z) = my_tup; // use pattern matching to destructure the tuple value
     println!("my_tup_x = {my_tup_x}");  // print the first value in the tuple
     println!("my_tup_y = {my_tup_y}");  // print the second value in the tuple
@@ -100,4 +101,8 @@ fn main() {
     println!("my_tup.1 = {six_point_four}");
     let one = my_tup.2;
     println!("my_tup.2 = {one}");
+
+    println!("\nThe Array Type");
+    let my_array = [1, 2, 3, 4, 5];
+    println!("my_array = {my_array:?}")
 }
