@@ -19,3 +19,18 @@ fn another_function() { // another_function is an example of snake case
 - We can call any function we’ve defined by entering its name followed by a set of parentheses. Because `another_function` is defined in the program, it can be called from inside the `main` function. 
 - Rust doesn’t care where you define your functions, only that they’re defined somewhere in a scope that can be seen by the caller.
 - In a Rust program, the lines execute in the order in which they appear in the main function.
+
+## Parameters
+- Functions can have _parameters_: special variables that are part of a function's signature.
+- Technically, they are called _arguments_, but people tend to use the words _parameter_ and _argument_ interchangeably.
+- In this version of *another_function*, we add a parameter:
+
+```rust
+fn main() {
+  another_function(5);
+}
+
+fn another_function(x: i32) {
+  println!("The value of x is: {x}");
+}
+```
