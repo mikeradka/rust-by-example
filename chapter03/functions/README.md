@@ -30,7 +30,7 @@ fn main() {
   another_function(5);
 }
 
-fn another_function(x: i32) {
+fn another_function(x: i32) { // function has one parameter, x
   println!("The value of x is: {x}");
 }
 ```
