@@ -1,3 +1,4 @@
 # Todo
-- [ ] Demonstrate a simple function
-- [ ] Add examples of parameters
+- [x] Demonstrate a simple function
+- [x] Add examples of parameters
+- [ ] Statements and expressions
