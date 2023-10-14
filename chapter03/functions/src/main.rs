@@ -23,9 +23,9 @@ fn print_labeled_measurement(value: i32, unit_label: char) {
 }
 
 fn expression_example() {
-    let y = {
+    let y = {   // start the expression
         let x = 3;
-        x + 1
+        x + 1   // note the lack of semicolon, because this is an expression, not a statement
     };
 
     println!("The value of y is: {y}")
