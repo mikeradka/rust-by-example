@@ -59,3 +59,92 @@ The measurement is: 5h
 - Because we called the function with `5` as the value for `value` and `'h'` as the value for `unit_label`, the program output contains those values.
 
 ## Statements and Expressions
+- Function bodies are made up of a series of statements optionally ending in an expression
+- So far, the functions we've covered haven't included an ending expression.
+- Rust is an expression-based language.
+  - **Statements** are instructions that perform some action and do _not_ return a value.
+  - **Expressions** evaluate to a resultant value.
+
+- Statement example:
+```rust
+fn main() {
+  let y = 6;  // this is a statement
+}
+```
+- Function definitions are also statements. The entire preceding example is a statement in itself.
+- Statements do not return values. Therefore, you can't assign a `let` statement to another variable.
+- The following code tries to, and will return an error:
+```rust
+fn main() {
+  let x = (let y = 6);
+}
+```
+```
+$ cargo run
+   Compiling functions v0.1.0 (file:///projects/functions)
+error: expected expression, found `let` statement
+ --> src/main.rs:2:14
+  |
+2 |     let x = (let y = 6);
+  |              ^^^
+
+error: expected expression, found statement (`let`)
+ --> src/main.rs:2:14
+  |
+2 |     let x = (let y = 6);
+  |              ^^^^^^^^^
+  |
+  = note: variable declaration using `let` is a statement
+
+error[E0658]: `let` expressions in this position are unstable
+ --> src/main.rs:2:14
+  |
+2 |     let x = (let y = 6);
+  |              ^^^^^^^^^
+  |
+  = note: see issue #53667 <https://github.com/rust-lang/rust/issues/53667> for more information
+
+warning: unnecessary parentheses around assigned value
+ --> src/main.rs:2:13
+  |
+2 |     let x = (let y = 6);
+  |             ^         ^
+  |
+  = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+  |
+2 -     let x = (let y = 6);
+2 +     let x = let y = 6;
+  |
+
+For more information about this error, try `rustc --explain E0658`.
+warning: `functions` (bin "functions") generated 1 warning
+error: could not compile `functions` due to 3 previous errors; 1 warning emitted
+```
+- The `let y = 6` statement does not return a value, so there isn't anything for `x` to bind to. This is different than what happens in other languages, such as C and Ruby, where the assignment returns the value of the assignment.
+
+- **Expressions** evaluate to a value.
+- Consider a math operation, such as `5 + 6`. This is an expression that evalues to the value `11`.
+- Expressions can be part of statements. Calling a macro is an expression. A new scope block created with curly brackets is an expression, for example:
+```rust
+fn main() {
+  let y = {
+    let x = 3;
+    x + 1
+  };
+
+  println!("The value of y is: {y}");
+}
+```
+
+This expression:
+```rust
+{
+  let x = 3;
+  x + 1
+};
+```
+is a block that evaluates to `4`. That value gets bound to `y` as part of the `let` statement.
+- Note that the `x + 1` line doesn't have a semicolon at the end. Expressions do not include ending semicolons. If you add a semicolon to the end of an expression, you turn it into a statement, and it will not return a value.
+
+## Functions with Return Values
