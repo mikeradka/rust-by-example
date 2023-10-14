@@ -148,3 +148,69 @@ is a block that evaluates to `4`. That value gets bound to `y` as part of the `l
 - Note that the `x + 1` line doesn't have a semicolon at the end. Expressions do not include ending semicolons. If you add a semicolon to the end of an expression, you turn it into a statement, and it will not return a value.
 
 ## Functions with Return Values
+- Functions can return values to the code that calls them. We don't name return values, but we must declare their type after an arrow (`->`). 
+- In Rust, the return value of the function is synonymous with the value of the final expression in the block of the body of a function.
+- You can return early from a function by using the `return` keyword and specifying a value, but most functions return the last expression implicitly. Here is an example of a function that returns a value:
+```rust
+fn five() -> i32 {
+  5
+}
+
+fn main() {
+  let x = five();
+
+  println!("The value of x is {x}");
+}
+```
+- There are no function calls, macros, or even `let` statements in the `five` function - just the number `5` by itself. That's a perfectly valid function in Rust.
+```
+$ cargo run
+   Compiling functions v0.1.0 (file:///projects/functions)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+     Running `target/debug/functions`
+The value of x is: 5
+```
+- The `5` in `five` is the function's return value, which is why the return type is `i32`. 
+- Here is another example:
+```rust
+fn main() {
+  let x = plus_one(5);
+
+  println!("The value of x is: {x}");
+}
+
+fn plus_one(x: i32) -> i32 {
+  x + 1
+}
+```
+- Running this code will print `The value of x is: 6`. But if we place a semicolon at the end of the line containing `x + 1`, changing it from an expression to a statement, we'll get an error:
+```rust
+fn main() {
+    let x = plus_one(5);
+
+    println!("The value of x is: {x}");
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1;
+}
+```
+- Compiling the code produces an error:
+```
+$ cargo run
+   Compiling functions v0.1.0 (file:///projects/functions)
+error[E0308]: mismatched types
+ --> src/main.rs:7:24
+  |
+7 | fn plus_one(x: i32) -> i32 {
+  |    --------            ^^^ expected `i32`, found `()`
+  |    |
+  |    implicitly returns `()` as its body has no tail or `return` expression
+8 |     x + 1;
+  |          - help: remove this semicolon to return this value
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `functions` due to previous error
+```
+
+- The main error message, `mismatched types`, reveals the core issue with this code. The definition of the function `plus_one` says that it will return an `i32`, but statements don't evaluate to a value, which is expressed by `()`, the unit type. Therefore, nothing is returned, which contradicts the function definition and results in an error. In this output, Rust provides a message to possibly help rectify this issue: it suggests removing the semicolon, which would fix the error.

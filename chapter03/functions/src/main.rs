@@ -8,6 +8,12 @@ fn main() {
     print_labeled_measurement(5, 'h');
 
     expression_example();
+
+    let z = five();
+    println!("The value of z is: {z}");
+
+    let a = plus_one(5);
+    println!("The value of a is: {a}");
 }
 
 fn first_function() {
@@ -29,4 +35,12 @@ fn expression_example() {
     };
 
     println!("The value of y is: {y}")
+}
+
+fn five() -> i32 {
+    5
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }
