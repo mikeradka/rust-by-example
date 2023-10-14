@@ -34,3 +34,28 @@ fn another_function(x: i32) { // function has one parameter, x
   println!("The value of x is: {x}");
 }
 ```
+- In function signatures, you **must** declare the type of each parameter.
+- When defining multiple parameters, separate the parameter declarations with commas, like this:
+
+```rust
+fn main() {
+  print_labeled_measurement(5, 'h');
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+  println!("The measurement is: {value}{unit_label}");
+}
+```
+
+- This example creates a function named *print_labeled_measurement* with two parameters: `value` (`i32`), and `unit_label` (`char`).
+
+```
+$ cargo run
+   Compiling functions v0.1.0 (file:///projects/functions)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+     Running `target/debug/functions`
+The measurement is: 5h
+```
+- Because we called the function with `5` as the value for `value` and `'h'` as the value for `unit_label`, the program output contains those values.
+
+## Statements and Expressions
