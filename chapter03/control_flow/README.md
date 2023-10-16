@@ -38,3 +38,6 @@ $ cargo run
      Running `target/debug/branches`
 condition was false
 ```
+
+- It's also worth noting that the condition in this code _must_ be a `bool`. If the condition isn't a `bool`, there will be an error:
+
