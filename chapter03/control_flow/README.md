@@ -41,3 +41,26 @@ condition was false
 
 - It's also worth noting that the condition in this code _must_ be a `bool`. If the condition isn't a `bool`, there will be an error:
 
+```rust
+fn main() {
+    let number = 3;
+
+    if number {
+        println!("number was three");
+    }
+}
+```
+
+- The `if` condition evaluates to a value of `3` this time, and Rust throws an error:
+```
+$ cargo run
+   Compiling branches v0.1.0 (file:///projects/branches)
+error[E0308]: mismatched types
+ --> src/main.rs:4:8
+  |
+4 |     if number {
+  |        ^^^^^^ expected `bool`, found integer
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `branches` due to previous error
+```
