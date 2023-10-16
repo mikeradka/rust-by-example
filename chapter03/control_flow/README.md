@@ -26,3 +26,15 @@ with the conditions in `if` expressions are sometimes called `arms`.
 to give the program an alternative block of code to execute should the condition
 evaluate to `false`
 - If you don't provide an `else` expression and the condition is `false`, the program will just skip the `if` block and move on to the next bit of code.
+
+- If we change the value of `number` to one that makes the condition `false`:
+```rust
+let number = 7;
+```
+```
+$ cargo run
+   Compiling branches v0.1.0 (file:///projects/branches)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+     Running `target/debug/branches`
+condition was false
+```
