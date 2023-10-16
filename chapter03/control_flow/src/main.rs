@@ -18,4 +18,11 @@ fn main() {
     else {
         println!("condition was false");
     }
+
+    // Test 3
+    // let number3 = 3;
+
+    // if number3 {
+    //     println!("number was three");
+    // }
 }
