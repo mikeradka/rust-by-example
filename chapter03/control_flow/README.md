@@ -163,3 +163,8 @@ error[E0308]: `if` and `else` have incompatible types
 For more information about this error, try `rustc --explain E0308`.
 error: could not compile `branches` due to previous error
 ```
+
+- The expression in the `if` block evaluates to an integer, and the expression in the `else` block evaluates to a string. This won't work because variables much have a single type, and Rust needs to know at compile time what type the `number` variable is, definitively.
+- Knowing the type of `number` lets the compiler verify the type is valid everywhere we use it. Rust wouldn't be able to do that if the type of `number` was only determined at runtime.
+
+### Repetition with Loops
