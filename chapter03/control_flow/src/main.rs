@@ -3,25 +3,25 @@ fn main() {
     let number = 3;
   
     if number < 5 {
-      println!("condition was true");
+      println!("condition was true.");
     } else {
-      println!("condition was false");
+      println!("condition was false.");
     }
 
     // Test 2
     let number2 = 7;
 
     if number2 < 5 {
-        println!("condition was true");
+        println!("condition was true.");
     } else {
-        println!("condition was false");
+        println!("condition was false.");
     }
 
     // Test 3
     // let number3 = 3;
 
     // if number3 {
-    //     println!("number was three");
+    //     println!("number was three.");
     // }
 
     // Test 4
@@ -43,4 +43,10 @@ fn main() {
     } else {
       println!("number is not divisible by 4, 3, or 2.");
     }
+
+    // Test 6: Using if in a let Statement
+    let condition = true;
+    let number = if condition { 5 } else { 6 };
+  
+    println!("The value of number is: {number}.");
 }
