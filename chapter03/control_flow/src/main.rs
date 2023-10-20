@@ -46,7 +46,13 @@ fn main() {
 
     // Test 6: Using if in a let Statement
     let condition = true;
-    let number = if condition { 5 } else { 6 };
+    let number6 = if condition { 5 } else { 6 };
   
-    println!("The value of number is: {number}.");
+    println!("The value of number is: {number6}.");
+
+    // Test 7: mismatched types
+    // let condition2 = true;
+
+    // let number7 = if condition { 5 } else { "six" };
+    // println!("The value of number is {number7}.")
 }

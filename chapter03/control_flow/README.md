@@ -124,3 +124,42 @@ fn main() {
   println!("The value of number is: {number}");
 }
 ```
+- The `number` variable will be bound to a value based on the outcome of the `if` expression. Running the code looks like this:
+```rust
+$ cargo run
+   Compiling branches v0.1.0 (file:///projects/branches)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+     Running `target/debug/branches`
+The value of number is: 5
+```
+- Blocks of code evaluate to the last expression in them, and numbers by themselves are also expressions.
+- In this case, the valud of the whole `if` expression depends on which block of code executes. 
+- This means the values that have the potential to be results from each arm of the `if` **must be the same type**.
+- If the types are mismatched, there will be an error:l
+
+```rust
+fn main() {
+    let condition = true;
+
+    let number = if condition { 5 } else { "six" };
+
+    println!("The value of number is: {number}");
+}
+```
+
+- The error is thrown, and Rust indicates exactly where to find the problem in the program:
+
+```
+$ cargo run
+   Compiling branches v0.1.0 (file:///projects/branches)
+error[E0308]: `if` and `else` have incompatible types
+ --> src/main.rs:4:44
+  |
+4 |     let number = if condition { 5 } else { "six" };
+  |                                 -          ^^^^^ expected integer, found `&str`
+  |                                 |
+  |                                 expected because of this
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `branches` due to previous error
+```
