@@ -114,3 +114,13 @@ number is divisible by 3
 - Using too many `else if` expressions can clutter your code, so if you have more than one, you might want to _refactor_ your code. Chapter 6 describes a powerful Rust branching construct called `match` for these cases.
 
 ### Using `if` in a `let` Statement
+- Because `if` is an _expression_, we can use it on the right side of a `let` statement to assign the outcome to a variable.
+
+```rust
+fn main() {
+  let condition = true;
+  let number = if condition { 5 } else { 6 };
+
+  println!("The value of number is: {number}");
+}
+```
