@@ -64,3 +64,17 @@ error[E0308]: mismatched types
 For more information about this error, try `rustc --explain E0308`.
 error: could not compile `branches` due to previous error
 ```
+
+- The error indicates that Rust expected a `bool` but got an integer. Unlike languages such as Ruby and Javascript, Rust will not automatically try to convert non-Boolean types to a Boolean. You must always be explicit and always provide `if` with a Boolean as a condition.
+- If we want the `if` code block to run only when a number is _not equal_ to `0`, for example, we can change the `if` expression to the following:
+
+```rust
+fn main() {
+  let number = 3;
+
+  if number != 0 {
+    println!("number was something other than 0.")
+  }
+}
+```
+- Running this code will print `number was something other than 0.`

@@ -25,4 +25,11 @@ fn main() {
     // if number3 {
     //     println!("number was three");
     // }
+
+    // Test 4
+    let number4 = 3;
+
+    if number4 != 0 {
+      println!("number was something other than 0.");
+    }
 }
