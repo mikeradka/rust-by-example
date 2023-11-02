@@ -168,3 +168,39 @@ error: could not compile `branches` due to previous error
 - Knowing the type of `number` lets the compiler verify the type is valid everywhere we use it. Rust wouldn't be able to do that if the type of `number` was only determined at runtime.
 
 ### Repetition with Loops
+It's often useful to execute a block of code more than once. 
+For this task, Rust provides several _loops_, which will run through the code inside the loop body to the end and then 
+start immediately back at the beginning. To experiment with 
+loops, let's make a new project called loops.
+```rust
+fn main() {
+    loop {
+        println!("again!");
+    }
+}
+```
+When we run this program, we'll see `again!` printed over and 
+over continuously until we stop the program manually. Most 
+terminals support the keyboard shortcut _ctrl-c_ to interrupt 
+a program that is stuck in a continual loop.
+```
+$ cargo run
+   Compiling loops v0.1.0 (file:///projects/loops)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.29s
+     Running `target/debug/loops`
+again!
+again!
+again!
+again!
+^Cagain!
+```
+
+* Fortunately, Rust also provides a way to break out of a loop 
+using code. 
+* You can place the `break` keyword within the loop 
+to tell the program when to stop executing the loop.
+* Also `continue` in a loop tells the program to skip over 
+any remaining code in this iteration of the loop and go to 
+the next iteration.
+
+#### Returning Values from Loops
