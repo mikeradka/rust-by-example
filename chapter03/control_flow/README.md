@@ -270,3 +270,24 @@ fn main() {
   println!("End count = {count}");
 }
 ```
+
+The outer loop has the label `counting_up`, and it will count up 
+from `0` to `2`. The inner loop without a label counts down from 
+`10` to `9`. The first `break` that doesn't specify a label will 
+exit the inner loop only. The `break 'counting_up;` statement will 
+exit the outer loop. When executed, this code prints:
+
+```
+$ cargo run                        (base) 
+    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
+     Running `target/debug/loop_labels`
+count = 0
+remaining = 10
+remaining = 9
+count = 1
+remaining = 10
+remaining = 9
+count = 2
+remaining = 10
+End count = 2
+```
