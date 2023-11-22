@@ -229,3 +229,44 @@ fn main() {
     println!("The result is {result}");
 }
 ```
+
+Before the loop, we declare a variable named `counter` and initialize 
+it to `0`. Then we declare a variable named `result` to hold the the 
+value returned from the loop. On every iteration of the loop, we add 
+`1` to the `counter` variable, and then check whether the `counter` 
+is equal to `10`. When it is, we use the `break` keyword with the value 
+`counter * 2`. After the loop, we use a semicolon to end the statement 
+that assigns the value to `result`. Finally, we print the value in 
+`result`, which in this case is `20`.
+
+#### Loop Labels to Disambiguate Between Multiple Loops
+If you have loops within loops, `break` and `continue` apply to the 
+innermost loop at that point. You can optionally specify a _loop label_
+on a loop that you can use with `break` or `continue` to specify that 
+those keywords apply to the labeled loop instead of the innermost loop. 
+Loop labels must begin with a single quote. Here is an example with two 
+nested loops:
+
+```rust
+fn main() {
+  let mut count = 0;
+  'counting_up: loop {
+    println!("count = {count}");
+    let mut remaining = 10;
+
+    loop {
+      println!("remaining = {remaining}");
+      if remaining == 9 {
+        break;
+      }
+      if count == 2 {
+        break 'counting_up;
+      }
+      remaining -= 1;
+    }
+
+    count += 1;
+  }
+  println!("End count = {count}");
+}
+```
